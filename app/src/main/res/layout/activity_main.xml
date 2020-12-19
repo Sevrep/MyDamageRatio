@@ -4,38 +4,217 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/keqbg"
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/edtBonusAttack"
+    <TextView
+        android:id="@+id/txtTotalAtk2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="end"
+        android:text="@string/_000_00"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/edtCriticalDamage2"
+        app:layout_constraintStart_toStartOf="@+id/edtCriticalDamage2"
+        app:layout_constraintTop_toBottomOf="@+id/edtCriticalDamage2" />
+
+    <TextView
+        android:id="@+id/txtDmg2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="end"
+        android:text="@string/_000_00"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtTotalAtk2"
+        app:layout_constraintStart_toStartOf="@+id/txtTotalAtk2"
+        app:layout_constraintTop_toBottomOf="@+id/txtTotalAtk2" />
+
+    <TextView
+        android:id="@+id/txtCd2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="end"
+        android:text="@string/_000_00"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtDmg2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtDmg2"
+        app:layout_constraintTop_toBottomOf="@+id/txtDmg2" />
+
+    <TextView
+        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/damage_ratio"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtDmg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtDmg" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/critical_ratio"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtCd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtCd" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/attack_ratio"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTotalAtk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtTotalAtk" />
+
+    <EditText
+        android:id="@+id/edtCriticalDamage2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/border"
         android:ems="10"
         android:gravity="center_horizontal"
-        android:hint="Bonus (green) attack"
-        android:inputType="numberSigned|number"
+        android:inputType="numberDecimal"
+        android:padding="4dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/edtCriticalDamage"
+        app:layout_constraintTop_toTopOf="@+id/edtCriticalDamage"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/edtTotalDamage2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/border"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:inputType="numberDecimal"
+        android:padding="4dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edtTotalDamage"
+        app:layout_constraintTop_toTopOf="@+id/edtTotalDamage"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/edtBaseAttack2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/border"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:inputType="number"
+        android:padding="4dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edtBaseAttack"
+        app:layout_constraintTop_toTopOf="@+id/edtBaseAttack"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/edtBonusAttack2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/border"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:inputType="numberSigned|number"
+        android:padding="4dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edtBonusAttack"
+        app:layout_constraintTop_toTopOf="@+id/edtBonusAttack"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/edtCriticalRate2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/border"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:inputType="numberDecimal"
+        android:padding="4dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edtCriticalRate"
+        app:layout_constraintTop_toTopOf="@+id/edtCriticalRate"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/edtBonusAttack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/border"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:inputType="numberSigned|number"
+        android:padding="4dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/edtBonusAttack2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
 
     <EditText
         android:id="@+id/edtBaseAttack"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/border"
         android:ems="10"
         android:gravity="center_horizontal"
-        android:hint="Base (white) attack"
         android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtBonusAttack" />
+        android:padding="4dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/edtBaseAttack2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/edtBonusAttack"
+        android:importantForAutofill="no"
+        tools:ignore="Autofill,LabelFor" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bonus Attack"
-        android:textSize="18sp"
+        android:text="@string/bonus_attack"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/edtBonusAttack"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/edtBonusAttack" />
@@ -44,62 +223,72 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Base Attack"
-        android:textSize="18sp"
+        android:text="@string/base_attack"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/edtBaseAttack"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/edtBaseAttack" />
 
     <TextView
         android:id="@+id/txtTotalAtk"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="%TotalATK"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/textView11"
-        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="end"
+        android:text="@string/_000_00"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/edtCriticalDamage"
+        app:layout_constraintStart_toStartOf="@+id/edtCriticalDamage"
         app:layout_constraintTop_toBottomOf="@+id/edtCriticalDamage" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Total %DMG"
-        android:textSize="18sp"
+        android:text="@string/total_dmg"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/edtTotalDamage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/edtTotalDamage" />
 
     <EditText
         android:id="@+id/edtTotalDamage"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/border"
         android:ems="10"
         android:gravity="center_horizontal"
-        android:hint="Add all %DMG"
         android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtBaseAttack" />
+        android:padding="4dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/edtTotalDamage2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/edtBaseAttack"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
 
     <TextView
         android:id="@+id/txtDmg"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="%DMG :"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/txtTotalAtk"
-        app:layout_constraintEnd_toStartOf="@+id/textView12"
-        app:layout_constraintStart_toEndOf="@+id/textView11"
-        app:layout_constraintTop_toTopOf="@+id/txtTotalAtk" />
+        android:layout_marginTop="8dp"
+        android:gravity="end"
+        android:text="@string/_000_00"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtTotalAtk"
+        app:layout_constraintStart_toStartOf="@+id/txtTotalAtk"
+        app:layout_constraintTop_toBottomOf="@+id/txtTotalAtk" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Critical Rate"
-        android:textSize="18sp"
+        android:text="@string/critical_rate"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/edtCriticalRate"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/edtCriticalRate" />
@@ -108,68 +297,71 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Critical Damage"
-        android:textSize="18sp"
+        android:text="@string/critical_damage"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/edtCriticalDamage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/edtCriticalDamage" />
 
     <EditText
         android:id="@+id/edtCriticalRate"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/border"
         android:ems="10"
         android:gravity="center_horizontal"
-        android:hint="%CR"
         android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtTotalDamage" />
+        android:padding="4dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/edtCriticalRate2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/edtTotalDamage"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
 
     <EditText
         android:id="@+id/edtCriticalDamage"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/border"
         android:ems="10"
         android:gravity="center_horizontal"
-        android:hint="%CD"
         android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtCriticalRate" />
+        android:padding="4dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/edtCriticalDamage2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/edtCriticalRate"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
 
     <TextView
         android:id="@+id/txtCd"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="%CD"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/txtDmg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView12"
-        app:layout_constraintTop_toTopOf="@+id/txtDmg" />
+        android:layout_marginTop="8dp"
+        android:gravity="end"
+        android:text="@string/_000_00"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtDmg"
+        app:layout_constraintStart_toStartOf="@+id/txtDmg"
+        app:layout_constraintTop_toBottomOf="@+id/txtDmg" />
 
-    <TextView
-        android:id="@+id/textView11"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=":"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="@+id/txtTotalAtk"
-        app:layout_constraintEnd_toStartOf="@+id/txtDmg"
-        app:layout_constraintStart_toEndOf="@+id/txtTotalAtk"
-        app:layout_constraintTop_toTopOf="@+id/txtTotalAtk"
-        app:layout_constraintVertical_bias="0.75" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=":"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView11"
-        app:layout_constraintEnd_toStartOf="@+id/txtCd"
-        app:layout_constraintStart_toEndOf="@+id/txtDmg"
-        app:layout_constraintTop_toTopOf="@+id/textView11" />
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintGuide_percent="0.45"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
